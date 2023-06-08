@@ -1,6 +1,16 @@
+import java.util.Random;
+
 public class PageGenerator
 {
 
+	public int[] getReferenceString(int size){
+		Random rand = new Random();
+		int[] toReturn = new int[size];
+		for(int i = 0; i < size; i++){
+			toReturn[i] = rand.nextInt(9);
+		}
+		return toReturn;
+	}
 	public int[] getReferenceString() {
 
 		int[] rStr1 = {7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1};
