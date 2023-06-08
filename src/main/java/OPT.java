@@ -16,49 +16,44 @@ public class OPT extends ReplacementAlgorithm {
         ArrayList<Integer> ram = new ArrayList<>();
         int faultCount = 0;
         int cur = 0;
-        HashMap<Integer, ArrayList<Integer>> nextAppMap = new HashMap<>();
+
 
         for (int i : refString) {
-            if (!nextAppMap.containsKey(i)) {
-                ArrayList<Integer> a = new ArrayList<>();
-                a.add(cur);
-                nextAppMap.put(i, a);
-            } else {
-                nextAppMap.get(i).add(cur);
-            }
-            cur++;
-        }
-
-        cur = 0;
-        for (int i : refString) {
-           // System.out.println(ram);
-            //System.out.println(faultCount + " fault(s)");
-            //System.out.println("number to add: " + i);
             if (!ram.contains(i)) {
                 faultCount++;
                 if (ram.size() == numFrames) {
                     int maxNum = -1;
                     int max = -1;
                     for (int y : ram) {
-                        if(nextAppMap.get(y).size() == 0){
+                        int tmp = getNextInstance(refString,y,cur);
+                        if(tmp == Integer.MAX_VALUE){
                             maxNum = y;
                             break;
                         }
-                        int nextAppearance = nextAppMap.get(y).get(0);
-                        if (nextAppearance > max) {
-                            max = nextAppearance;
+                        if(tmp > max){
+                            max = tmp;
                             maxNum = y;
                         }
                     }
-                    ram.remove(Integer.valueOf(maxNum));
-                    nextAppMap.get(maxNum).remove(0);
+                    ram.remove(ram.indexOf(maxNum));
                 }
                 ram.add(i);
+
             }
             cur++;
         }
 
         return faultCount;
+    }
+
+    private int getNextInstance(int[] arr, int num, int start){
+        int nextInstance = 0;
+        for(int i = start; i < arr.length; i++){
+            if(arr[i] == num){
+                return i;
+            }
+        }
+        return Integer.MAX_VALUE;
     }
 
     @Override

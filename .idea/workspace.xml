@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1e965402-3705-47e3-bd17-795f815972cd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FIFO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FIFO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OPT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/aodha/IdeaProjects/CSB340_PageReplacement"
+    "create.test.in.the.same.root": "true",
+    "jdk.selected.JAVA_MODULE": "16",
+    "last_opened_file_path": "C:/Users/aodha/IdeaProjects/CSB340_PageReplacement",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677550420561</updated>
       <workItem from="1686185352060" duration="5059000" />
-      <workItem from="1686192929362" duration="667000" />
+      <workItem from="1686192929362" duration="3802000" />
     </task>
     <servers />
   </component>
