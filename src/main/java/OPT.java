@@ -31,9 +31,9 @@ public class OPT extends ReplacementAlgorithm {
 
         cur = 0;
         for (int i : refString) {
-            System.out.println(ram);
-            System.out.println(faultCount);
-            System.out.println(i);
+           // System.out.println(ram);
+            //System.out.println(faultCount + " fault(s)");
+            //System.out.println("number to add: " + i);
             if (!ram.contains(i)) {
                 faultCount++;
                 if (ram.size() == numFrames) {
